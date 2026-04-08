@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Face API</h1>
+    </header>
+    <main class="container">
+        <h1>Entrega de pedido</h1>
+        <p class="descripcion">
+        Escanear un código QR, obtener la ubicación y mostrar el resultado.
+        </p>
+
+        <section class="panel">
+        <video id="video" autoplay playsinline></video>
+        <canvas id="canvas" ></canvas>
+
+        <div class="botones">
+            <button id="btnIniciar">Iniciar cámara</button>
+            <button id="btnEscanear">Escanear QR</button>
+            <button id="btnUbicacion">Obtener ubicación</button>
+            <button id="btnRegistrar">Registrar entrega</button>
+            <button id="btnLimpiar">Limpiar</button>
+        </div>
+
+        <div id="estado" class="estado">
+            Presioná "Iniciar cámara" para comenzar.
+        </div>
+        </section>
+
+        <section class="panel resultados">
+        <h2>Resultado</h2>
+
+        <p><strong>QR leído:</strong> <span id="qrResultado">-</span></p>
+        <p><strong>Latitud:</strong> <span id="latitud">-</span></p>
+        <p><strong>Longitud:</strong> <span id="longitud">-</span></p>
+
+        <div class="json-box">
+            <h3>Payload simulado para enviar al servidor</h3>
+            <pre id="payload">{}</pre>
+        </div>
+        </section>
+    </main>
+    <footer>
+        <p> ISEC | Programación con Entornos de trabajo | 2026</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
