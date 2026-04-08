@@ -175,3 +175,6 @@ btnEscanear.addEventListener("click", escanearQR);
 btnUbicacion.addEventListener("click", obtenerUbicacion);
 btnRegistrar.addEventListener("click", registrarEntrega);
 btnLimpiar.addEventListener("click", limpiarDatos);
+
+
+// Nuevo cambio
